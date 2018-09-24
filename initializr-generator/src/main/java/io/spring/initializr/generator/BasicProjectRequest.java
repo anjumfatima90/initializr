@@ -46,6 +46,8 @@ public class BasicProjectRequest {
 
 	private String bootVersion;
 
+	private String container;
+
 	private String packaging;
 
 	private String applicationName;
@@ -129,6 +131,14 @@ public class BasicProjectRequest {
 
 	public void setBootVersion(String bootVersion) {
 		this.bootVersion = bootVersion;
+	}
+
+	public String getContainer() {
+		return this.container;
+	}
+
+	public void setContainer(String container) {
+		this.container = container;
 	}
 
 	public String getPackaging() {

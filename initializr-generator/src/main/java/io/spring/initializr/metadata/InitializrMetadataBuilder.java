@@ -172,6 +172,7 @@ public final class InitializrMetadataBuilder {
 			metadata.getDependencies().merge(this.properties.getDependencies());
 			metadata.getTypes().merge(this.properties.getTypes());
 			metadata.getBootVersions().merge(this.properties.getBootVersions());
+			metadata.getContainers().merge(this.properties.getContainers());
 			metadata.getPackagings().merge(this.properties.getPackagings());
 			metadata.getJavaVersions().merge(this.properties.getJavaVersions());
 			metadata.getLanguages().merge(this.properties.getLanguages());

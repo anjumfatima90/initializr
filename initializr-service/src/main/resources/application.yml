@@ -1383,3 +1383,10 @@ initializr:
     - name: 1.1.12
       id: 1.1.12.RELEASE
       default: false
+  containers:
+    - name: Tomcat
+      id: tomcat
+      default: true
+    - name: Liberty
+      id: liberty
+      default: false

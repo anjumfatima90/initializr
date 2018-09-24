@@ -478,6 +478,9 @@ public class ProjectGenerator {
 		if (!request.getBoms().isEmpty()) {
 			model.put("hasBoms", true);
 		}
+		if ("liberty".equals(request.getContainer())) {
+			model.put("liberty", true);
+		}
 
 		return model;
 	}

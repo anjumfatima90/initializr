@@ -63,6 +63,8 @@ public class InitializrMetadataV2JsonMapper implements InitializrMetadataJsonMap
 						TemplateVariable.VariableType.REQUEST_PARAM),
 				new TemplateVariable("bootVersion",
 						TemplateVariable.VariableType.REQUEST_PARAM),
+				new TemplateVariable("containers",
+						TemplateVariable.VariableType.REQUEST_PARAM),
 				new TemplateVariable("groupId",
 						TemplateVariable.VariableType.REQUEST_PARAM),
 				new TemplateVariable("artifactId",
@@ -90,6 +92,7 @@ public class InitializrMetadataV2JsonMapper implements InitializrMetadataJsonMap
 		singleSelect(delegate, metadata.getJavaVersions());
 		singleSelect(delegate, metadata.getLanguages());
 		singleSelect(delegate, metadata.getBootVersions());
+		singleSelect(delegate, metadata.getContainers());
 		text(delegate, metadata.getGroupId());
 		text(delegate, metadata.getArtifactId());
 		text(delegate, metadata.getVersion());

@@ -51,6 +51,14 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                             {{/bootVersions.content}}
                         </select>
                     </span>
+                    <span class="rwd-line">
+                    <label for="container">with Container</label>
+                    <select tabindex="4" class="form-control" name="container" id="container">
+                        {{#containers.content}}
+                        <option value="{{id}}" {{#default}} selected{{/default}}>{{name}}</option>
+                        {{/containers.content}}
+                    </select>
+                    </span>
                     </h2>
                 </div>
             </div>

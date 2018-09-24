@@ -69,6 +69,12 @@ public class InitializrProperties extends InitializrConfiguration {
 	private final List<DefaultMetadataElement> bootVersions = new ArrayList<>();
 
 	/**
+	 * Available Spring Boot containers.
+	 */
+	@JsonIgnore
+	private final List<DefaultMetadataElement> containers = new ArrayList<>();
+
+	/**
 	 * GroupId metadata.
 	 */
 	@JsonIgnore
@@ -127,6 +133,10 @@ public class InitializrProperties extends InitializrConfiguration {
 
 	public List<DefaultMetadataElement> getBootVersions() {
 		return this.bootVersions;
+	}
+
+	public List<DefaultMetadataElement> getContainers() {
+		return this.containers;
 	}
 
 	public SimpleElement getGroupId() {

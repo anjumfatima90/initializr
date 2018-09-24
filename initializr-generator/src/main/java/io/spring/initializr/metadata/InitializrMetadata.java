@@ -42,6 +42,9 @@ public class InitializrMetadata {
 	private final SingleSelectCapability bootVersions = new SingleSelectCapability(
 			"bootVersion", "Spring Boot Version", "spring boot version");
 
+	private final SingleSelectCapability containers = new SingleSelectCapability(
+			"container", "Spring Boot Container", "spring boot container");
+
 	private final SingleSelectCapability packagings = new SingleSelectCapability(
 			"packaging", "Packaging", "project packaging");
 
@@ -92,6 +95,10 @@ public class InitializrMetadata {
 		return this.bootVersions;
 	}
 
+	public SingleSelectCapability getContainers() {
+		return this.containers;
+	}
+
 	public SingleSelectCapability getPackagings() {
 		return this.packagings;
 	}
@@ -137,6 +144,7 @@ public class InitializrMetadata {
 		this.dependencies.merge(other.dependencies);
 		this.types.merge(other.types);
 		this.bootVersions.merge(other.bootVersions);
+		this.containers.merge(other.containers);
 		this.packagings.merge(other.packagings);
 		this.javaVersions.merge(other.javaVersions);
 		this.languages.merge(other.languages);
@@ -259,6 +267,7 @@ public class InitializrMetadata {
 		Map<String, Object> defaults = new LinkedHashMap<>();
 		defaults.put("type", defaultId(this.types));
 		defaults.put("bootVersion", defaultId(this.bootVersions));
+		defaults.put("container", defaultId(this.containers));
 		defaults.put("packaging", defaultId(this.packagings));
 		defaults.put("javaVersion", defaultId(this.javaVersions));
 		defaults.put("language", defaultId(this.languages));

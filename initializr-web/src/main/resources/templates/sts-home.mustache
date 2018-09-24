@@ -84,6 +84,12 @@
                 {{name}}
             </label>
             {{/bootVersions.content}}
+            {{#containers.content}}
+            <label class="radio">
+                <input type="radio" name="container" value="{{id}}"{{#default}} checked="true"{{/default}}/>
+                {{name}}
+            </label>
+            {{/containers.content}}
             <button name="generate-project" type="submit" class="btn">Generate</button>
         </form>
     </div>
