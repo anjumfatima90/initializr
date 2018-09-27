@@ -59,6 +59,8 @@ public class BasicProjectRequest {
 	// The base directory to create in the archive - no baseDir by default
 	private String baseDir;
 
+	private String appServer;
+
 	public List<String> getStyle() {
 		return this.style;
 	}
@@ -183,6 +185,14 @@ public class BasicProjectRequest {
 
 	public void setBaseDir(String baseDir) {
 		this.baseDir = baseDir;
+	}
+
+	public String getAppServer() {
+		return this.appServer;
+	}
+
+	public void setAppServer(String appServer) {
+		this.appServer = appServer;
 	}
 
 }

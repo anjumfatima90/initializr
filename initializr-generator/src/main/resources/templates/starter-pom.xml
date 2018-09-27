@@ -161,6 +161,20 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			{{#liberty}}
+			<plugin>
+				<groupId>io.openliberty.boost</groupId>
+				<artifactId>boost-maven-plugin</artifactId>
+				<version>0.1.2-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>package</goal>					   	
+						</goals>
+					</execution>
+				</executions> 
+			</plugin>
+			{{/liberty}}
 			{{#groovy}}
 			<plugin>
 				<groupId>org.codehaus.gmavenplus</groupId>
