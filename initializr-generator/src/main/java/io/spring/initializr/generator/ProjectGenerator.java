@@ -494,7 +494,13 @@ public class ProjectGenerator {
 					bootTwoZeroAvailable ? "testRuntimeOnly" : "testRuntime");
 		}
 
+		model.put("libertyBoost", isLibertyBoostEnabled(request));
+
 		return model;
+	}
+
+	private Object isLibertyBoostEnabled(ProjectRequest request) {
+		return "libertyBoost".equals(request.getAppLauncher());
 	}
 
 	private List<Map<String, String>> buildResolvedBoms(ProjectRequest request) {
