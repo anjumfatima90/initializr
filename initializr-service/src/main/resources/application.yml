@@ -1388,3 +1388,10 @@ initializr:
     - name: 1.1.12
       id: 1.1.12.RELEASE
       default: false
+  launchers:
+    - name: Spring Boot
+      id: spring-boot
+      default: true
+    - name: WebSphere Liberty
+      id: liberty
+      default: false

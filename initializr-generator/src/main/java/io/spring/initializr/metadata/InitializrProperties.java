@@ -105,6 +105,12 @@ public class InitializrProperties extends InitializrConfiguration {
 	@JsonIgnore
 	private final SimpleElement packageName = new SimpleElement(null);
 
+	/**
+	 * Available application launchers.
+	 */
+	@JsonIgnore
+	private final List<DefaultMetadataElement> launchers = new ArrayList<>();
+
 	public List<DependencyGroup> getDependencies() {
 		return this.dependencies;
 	}
@@ -151,6 +157,10 @@ public class InitializrProperties extends InitializrConfiguration {
 
 	public SimpleElement getPackageName() {
 		return this.packageName;
+	}
+
+	public List<DefaultMetadataElement> getLaunchers() {
+		return this.launchers;
 	}
 
 	/**

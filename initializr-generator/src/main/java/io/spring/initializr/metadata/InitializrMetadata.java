@@ -68,6 +68,9 @@ public class InitializrMetadata {
 	private final TextCapability packageName = new PackageCapability(this.groupId,
 			this.artifactId);
 
+	private final SingleSelectCapability launchers = new SingleSelectCapability(
+			"launcher", "Launcher", "Application Launcher");
+
 	public InitializrMetadata() {
 		this(new InitializrConfiguration());
 	}
@@ -128,6 +131,10 @@ public class InitializrMetadata {
 		return this.packageName;
 	}
 
+	public SingleSelectCapability getLaunchers() {
+		return this.launchers;
+	}
+
 	/**
 	 * Merge this instance with the specified argument.
 	 * @param other the other instance
@@ -146,6 +153,7 @@ public class InitializrMetadata {
 		this.artifactId.merge(other.artifactId);
 		this.version.merge(other.version);
 		this.packageName.merge(other.packageName);
+		this.launchers.merge(other.launchers);
 	}
 
 	/**
@@ -268,6 +276,7 @@ public class InitializrMetadata {
 		defaults.put("name", this.name.getContent());
 		defaults.put("description", this.description.getContent());
 		defaults.put("packageName", this.packageName.getContent());
+		defaults.put("launcher", defaultId(this.launchers));
 		return defaults;
 	}
 

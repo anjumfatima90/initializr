@@ -84,6 +84,13 @@
                 {{name}}
             </label>
             {{/bootVersions.content}}
+            <label>Launcher:</label>
+            {{#launchers.content}}
+            <label class="radio">
+                <input type="radio" name="launcher" value="{{id}}"{{#default}} checked="true"{{/default}}/>
+                {{name}}
+            </label>
+            {{/launchers.content}}
             <button name="generate-project" type="submit" class="btn">Generate</button>
         </form>
     </div>

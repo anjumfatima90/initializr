@@ -56,6 +56,8 @@ public class BasicProjectRequest {
 
 	private String javaVersion;
 
+	private String launcher;
+
 	// The base directory to create in the archive - no baseDir by default
 	private String baseDir;
 
@@ -183,6 +185,14 @@ public class BasicProjectRequest {
 
 	public void setBaseDir(String baseDir) {
 		this.baseDir = baseDir;
+	}
+
+	public String getLauncher() {
+		return this.launcher;
+	}
+
+	public void setLauncher(String launcher) {
+		this.launcher = launcher;
 	}
 
 }

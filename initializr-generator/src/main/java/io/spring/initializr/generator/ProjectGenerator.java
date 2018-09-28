@@ -479,7 +479,13 @@ public class ProjectGenerator {
 			model.put("hasBoms", true);
 		}
 
+		model.put("liberty", isLibertyEnabled(request));
+
 		return model;
+	}
+
+	private Object isLibertyEnabled(ProjectRequest request) {
+		return "liberty".equals(request.getLauncher());
 	}
 
 	private List<Map<String, String>> buildResolvedBoms(ProjectRequest request) {
